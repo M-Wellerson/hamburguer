@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__info">
+                <img class="header__nav_avatar" src="src/image/avatar.png">
+                <div>
+                    <span>Bem vindo, <strong>Whatever!</strong></span>
+                    <div class="header__nav__info__links">
+                        <div class="menu__dropdown">
+                            <a href=""><span>&#x2039;</span> Meu dados</a>
+                            <div class="menu__dropdown__content">
+                                <a href="">Item 1</a>
+                                <a href="">Item 2</a>
+                            </div>
+                        </div>
+                        <a href="">Sair</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__nav__itens">
+                <a href="">Inicio</a>
+                <a href="">Banner</a>
+                <a href="">Categorias</a>
+                <a href="">Produtos</a>
+            </div>
+            <div class="header__nav__search">
+                <form action="">
+                    <img class="header__nav__search_img" src="src/ico/search.png" alt="">
+                    <input class="header__nav__search_input" type="search" name="" id=""
+                        placeholder="O que você procura?">
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section class="form_cadastro">
+        <div class="form__wrapped">
+            <h1 class="title__section">Cadastro</h1>
+            <form action="" class="form form__cadastro">
+                <div class="form__imagem_upload">
+                    <input id="image__paceholder" type='file' accept=".png, .jpg, .jpeg" hidden>
+                    <label for="image__paceholder" class="btn__bombom btn__image"><img src="src/image/download-arrow.png">Enviar</label>
+                    <img class="form__image_placeholder" src="src/image/default-placeholder-1-2.png">
+                </div>
+                <div>
+                    <div>
+                        <label for="">Nome</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">E-mail</label>
+                        <input type="email" name="" id="">
+                    </div>
+                    <div>
+                </div>
+                    <label for="">Senha</label>
+                    <input type="password" name="" id="">
+                </div>
+                <div>
+                    <label for="">Descrição</label>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+                <input class="btn__bombom" type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
