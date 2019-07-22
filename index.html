@@ -46,12 +46,12 @@
     </header>
     <section class="cards">
         <div class="cards__list">
-            <img src="src/ico/menu.png">
-            <img src="src/ico/list-table.png">
+            <img class="grid__view" src="src/ico/menu.png">
+            <img class="grid__list" src="src/ico/list-table.png">
         </div>
-        <div class="cards__wrapped">
+        <div id="cards__wrapped_listar" class="cards__wrapped">
             <div class="card__novo_produto">
-                <div class="card__novo_produto__inner">
+                <div id="card__inner" class="card__novo_produto__inner">
                     <div class="cards__wrapped__square_white">
                         <div class="cards__wrapped__square_white__plus"></div>
                     </div>
@@ -61,9 +61,9 @@
                     </div>
                 </div>
             </div>
-            <div class="card_produto">
+            <div id="card__produto_list" class="card_produto">
                 <img class="card_produto_remove" src="src/ico/remove.png">
-                <div class="card__novo_produto__inner">
+                <div id="card__inner" class="card__novo_produto__inner">
                     <img src="src/image/brind.png">
                     <div class="card__novo_produto__inner__info">
                         <small>Nome</small>
@@ -78,9 +78,9 @@
                     </div>
                 </div>
             </div>
-            <div class="card_produto">
+            <div id="card__produto_list" class="card_produto">
                 <img class="card_produto_remove" src="src/ico/remove.png">
-                <div class="card__novo_produto__inner">
+                <div id="card__inner" class="card__novo_produto__inner">
                     <img src="src/image/brind.png">
                     <div class="card__novo_produto__inner__info">
                         <small>Nome</small>
@@ -95,9 +95,9 @@
                     </div>
                 </div>
             </div>
-            <div class="card_produto">
+            <div id="card__produto_list" class="card_produto">
                 <img class="card_produto_remove" src="src/ico/remove.png">
-                <div class="card__novo_produto__inner">
+                <div id="card__inner" class="card__novo_produto__inner">
                     <img src="src/image/brind.png">
                     <div class="card__novo_produto__inner__info">
                         <small>Nome</small>
@@ -114,6 +114,63 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const listButton = document.querySelector('.grid__list');
+        const gridButton = document.querySelector('.grid__view');
+        const list = document.querySelector('#cards__wrapped_listar');
+        const list__inner = document.querySelectorAll('#card__inner');
+        const list__produto = document.querySelectorAll('#card__produto_list');
+
+        gridButton.onclick = function () {
+            removeClass(list__inner, 'card__novo_produto__inner');
+            addClass(list__inner, 'card__novo_produto__inner__list');
+
+            // removeClass(list__inner, 'card__list');
+            // addClass(list__inner, 'card_produto');
+            list.classList.remove('cards__wrapped_list');
+            list.classList.add('cards__wrapped');
+            // list__inner.classList.remove('card__novo_produto__inner');
+            // list__inner.classList.add('card__novo_produto__inner__list');
+            // list__produto.forEach(x => {
+            //     x.classList.remove('card__list');
+            // });
+            // list__produto.forEach(x => {
+            //     x.classList.add('card_produto');
+            // });
+        }
+
+        listButton.onclick = function () {
+            removeClass(list__inner, 'card__novo_produto__inner');
+            addClass(list__inner, 'card__novo_produto__inner__list');
+
+            // removeClass(list__produto, 'card_produto');
+            // addClass(list__produto, 'card__list');
+            list.classList.remove('cards__wrapped');
+            list.classList.add('cards__wrapped_list');
+            // list__inner.classList.remove('card__novo_produto__inner__list');
+            // list__inner.classList.add('card__novo_produto__inner');
+            // list__produto.forEach(x => {
+            //     x.classList.remove('card_produto');
+            // });
+            // list__produto.forEach(x => {
+            //     x.classList.add('card__list');
+            // });
+        }
+
+        function removeClass(el, classId) {
+            console.log(el);
+            el.forEach(x => {
+                x.classList.remove(classId);
+            });
+        }
+
+        function addClass(id, classId) {
+            id.forEach(x => {
+                x.classList.add(classId);
+            });
+        }
+    </script>
 </body>
 
 </html>
