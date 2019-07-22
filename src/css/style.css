@@ -438,7 +438,8 @@ body {
     height: 220px;
     border-radius: 26px;
     box-shadow: 0 4px 6px 6px hsla(0, 0%, 0%, .2);
-    color: #fff;
+    background-color: #fff !important;
+    color: #747474;
 }
 
 .card__novo_produto__inner__list {
@@ -453,4 +454,19 @@ body {
 .card__novo_produto__inner__list .cards__wrapped__square_white:first-child {
     margin: 10px;
     height: 70px;
+}
+
+.card__list_novo_prod {
+    position: relative;
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: #2c50ef;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 6px 6px hsla(0, 0%, 0%, .2);
+    color: #fff;
+}
+
+.card__list_novo_prod > div > div {
+    width: 70px;
 }
