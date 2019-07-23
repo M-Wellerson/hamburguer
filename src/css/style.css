@@ -327,8 +327,6 @@ body {
     justify-items: right;
 }
 
-/* Teste Rápido */
-
 .cards__wrapped__list {
     margin: 0 auto;
     margin-top: 35px;
@@ -350,7 +348,7 @@ body {
     color: #747474;
 }
 
-.form_cadastro {
+.form_cadastro, .login {
     background-color: #fff;
     width: 1080px;
     margin: 0 auto;
@@ -469,4 +467,9 @@ body {
 
 .card__list_novo_prod > div > div {
     width: 70px;
+}
+
+.login {
+    text-align: center;
+    width: 30vw;
 }
