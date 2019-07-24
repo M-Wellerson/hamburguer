@@ -11,26 +11,33 @@
 </head>
 
 <body>
-    <header class="header">
-        
-    </header>
+    <header class="header"></header>
 
     <section class="login">
         <div class="form__wrapped">
             <h1 class="title__section">Login</h1>
-            <form action="" class="form form__login">
+            <form action="javascript:void(AreaRestrita.login())" method="POST" id="entrar" class="form form__login">
                 <div>
                     <label for="">E-mail</label>
-                    <input type="email" name="email" id="">
+                    <input type="email" name="email">
                 </div>
                 <div>
                     <label for="">Senha</label>
-                    <input type="password" name="password" id="">
+                    <input type="password" name="pass">
                 </div>
                 <input class="btn__bombom" type="submit" value="Entrar">
             </form>
         </div>
     </section>
+
+    <script src="src/js/library/Route.js"></script>
+    <script src="./src/js/library/Banco.js"></script>
+    <script src="./src/js/library/Auth.js"></script>
+    <script src="./src/js/library/Dom.js"></script>
+    <script src="./src/js/library/Form.js"></script> 
+
+    <script src="src/js/functions.js"></script>
+    <script src="src/js/main.js"></script>
 
 </body>
 
